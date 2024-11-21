@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Unex</title>
+    <!-- Importando Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para FontAwesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Mercado Unex</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <button class="btn btn-outline-primary" data-toggle="modal" data-target="#cartModal">
+                    <i class="fas fa-shopping-cart"></i> Carrinho (<span id="cart-count">0</span>)
+                </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Produtos -->
+<div class="container mt-4">
+    <div class="row" id="product-list">
+        <!-- Produtos serão carregados aqui pelo JS -->
+    </div>
+</div>
+
+<!-- Modal Carrinho -->
+<!-- Exemplo de Carrinho (Modal ou Aba) -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Carrinho de Compras</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <!-- Lista de itens no carrinho será exibida aqui -->
+                </div>
+                <div class="cart-total">
+                    <strong>Total da Compra: R$ <span id="cart-total">0.00</span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Exemplo de Carrinho -->
+<div class="container">
+    <div class="row" id="product-list">
+        <!-- Lista de produtos será carregada aqui -->
+    </div>
+</div>
+
+<!-- Modal para Seleção de Quantidade -->
+<div class="modal fade" id="quantityModal" tabindex="-1" aria-labelledby="quantityModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="quantityModalLabel">Selecione a Quantidade</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="quantity-options">
+                    <!-- As opções de quantidade serão inseridas aqui dinamicamente -->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" id="apply-quantity-btn">Aplicar Quantidade</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Importando Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
